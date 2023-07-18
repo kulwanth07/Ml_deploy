@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .marginTop {
+        margin-top: 20px;
+      }
+
+      .form-class {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .form-class button {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="marginTop">
+        <h1>DDoS Attack Detection</h1>
+      </div>
+
+      <div class="marginTop">
+        <h2>Insert your CSV file for detection</h2>
+        <form
+          action="/transform"
+          method="post"
+          enctype="multipart/form-data"
+          class="marginTop form-class"
+        >
+          <input type="file" name="data_file" class="btn btn-block" />
+          <button
+            type="submit"
+            class="btn btn-primary btn-block btn-large marginTop"
+          >
+            Detect
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      h3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    {% if result %}
+    <br>
+    <h3>
+      Out of {{result[0][0] + result[0][1]}} packets, ML model detects,
+      {{result[0][0]}}, as DDOS packets and, {{result[0][1]}} normal packets. </br>
+      ML model detects {{ "%.2f"|format(result[1][0]) }}% as DDOS packets
+    </h3>
+    {% endif %}
+  </body>
+</html>
